@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 #The following bash script displays all active
 #IPv4 IPs on the machine it’s executed on
+#ipv4_adr prints every just the ipv4 ip adresses
 
 ipv4_adr=$(ifconfig | awk '/inet/ {print $2'})
+
 for ip in $ipv4_adr; do
     echo "$ip"
 done
