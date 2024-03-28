@@ -3,7 +3,6 @@
 #IPv4 IPs on the machine it’s executed on
 
 ipv4_adr=$(ifconfig | awk '/inet/ {print $2'})
-echo "iPv4 addresses:"
 for ip in $ipv4_adr; do
     echo "$ip"
 done
