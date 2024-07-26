@@ -2,4 +2,7 @@
 # SSH client configuration must be configured to refuse to authenticate using a password
 # SSH client configuration must be configured to use the private key ~/.ssh/school
 
-cat ~/.ssh/school | ssh ubuntu@3.90.85.133 "mkdir -p ~/.ssh && chmod 700 ~/.ssh && cat >>  ~/.ssh/authorized_key
+Host 3.90.85.133
+	user ubuntu
+	IdentifyFile ~/.ssh/school
+	PasswordAuthentication no
