@@ -3,6 +3,5 @@
 file_line {'fix phpp to php':
   path    => '/var/www/html/wp-settings.php',
   line    => "define('DB_HOST', 'localhost');",
-  match   => 'phpp',
-  replace => 'php',
+  match   => 'define\(\'DB_HOST\',\s*\'phpp\'\);',
 }
